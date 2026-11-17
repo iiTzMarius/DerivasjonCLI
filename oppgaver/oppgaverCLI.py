@@ -21,6 +21,9 @@ def help() -> None:
         print(f"║ {navn:<30} │ {beskrivelse:<40} │ {funksjonsnavn:<18} ║")
     print("╚" + "═" * 96 + "╝")
 
+def oppgave_a():
+    print("f(x) = 2 * x**3 + x**2 - 13 * x + 6")
+
 def oppgave_b():
     print("Oppgave B")
 
@@ -81,7 +84,7 @@ def oppgave_d():
     fig.tight_layout()
     plt.show()
 
-def oppgave_d():
+def oppgave_f():
     def f(x):
         return 2 * x**3 + x**2 - 13 * x + 6
 
@@ -118,14 +121,20 @@ def oppgave_d():
     fig.tight_layout()
     plt.show()
 
+def oppgave_g():
+    print("Toppunkt: Fortegnet til den deriverte går fra positiv til negativ.")
+    print("Terrassepunkt: Fortegnet til den deriverte går fra og til positiv eller negativ rundt et punkt der den deriverte er lik 0.")
+    print("Bunnpunkt: Fortegnet til den deriverte går fra negativ til positiv.")
 
 commands = {
     "help": (help, "Vis kommandoer"),
     "q": (None, "Avslutt programmet"),
+    "a": (oppgave_a, "Kjører oppgave a"),
     "b": (oppgave_b, "Kjører oppgave b"),
     "c": (oppgave_c, "Kjører oppgave c"),
     "d": (oppgave_d, "Kjører oppgave d"),
-    "f": (oppgave_d, "Kjører oppgave f"),
+    "f": (oppgave_f, "Kjører oppgave f"),
+    "g": (oppgave_g, "Kjører oppgave g"),
 }
 
 help()
